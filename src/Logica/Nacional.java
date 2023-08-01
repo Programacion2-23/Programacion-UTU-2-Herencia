@@ -37,13 +37,18 @@ public class Nacional extends Articulo{
 	@Override
 	public double precioVenta() {
 		
+		double result1  = 0;
+		
 		if (departamento == "Montevideo" || departamento == "montevideo") {
-			return super.precioVenta() * 1.15;
-		} else if (departamento == "Interior" || departamento == "interior") {
-			return super.precioVenta() * 1.10;
-		} else {
-			return 0;
-		}
+			result1 = super.precioVenta() * 1.15;
+
+		} 
+		else if (departamento == "Interior" || departamento == "interior") {
+			
+			result1 = super.precioVenta() * 1.10;
+		} 
+		
+		return result1;
 	}
 	
 	public String toString() {
